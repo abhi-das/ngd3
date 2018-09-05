@@ -1,0 +1,4 @@
+<form [formGroup]="insFormGrp" (ngSubmit)="onFormSubmit()">
+  <ins-inpfield *ngFor="let field of formFields; trackBy: trackByLengthFn" [inFieldData]="field" [grpName]="insFormGrp"></ins-inpfield>
+  <button mat-flat-button>Register</button>
+</form>

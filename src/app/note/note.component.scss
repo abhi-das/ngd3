@@ -1,0 +1,72 @@
+@import "~@angular/material/theming";
+
+@mixin ins-note-theme($theme) {
+  $primary: map-get($theme, primary);
+  //   $accent: map-get($theme, accent);
+  //   $warn: map-get($theme, warn);
+  //   $background: map-get($theme, background);
+  //   $foreground: map-get($theme, foreground);
+
+  ins-note {
+    .ins-note-wrapper {
+      background: mat-color($mat-pink, 200);
+      padding: 1em;
+      color: $light-primary-text;
+    }
+    .customer-cta {
+      background: map_get($mat-pink, 700);
+      color: whitesmoke;
+      width: 100%;
+      flex-shrink: 0;
+      margin-top: 1em;
+      clear: both;
+    }
+    .icon-container {
+      display: inline-block;
+      float: right;
+      mat-icon {
+        vertical-align: middle;
+      }
+    }
+
+    // .mat-toolbar {
+    //   background: $dark-primary-text;
+    //   color: whitesmoke;
+    //   mat-toolbar-row {
+    //     .btn-spacer {
+    //       flex: 1 1 auto;
+    //     }
+    //     mat-icon {
+    //       color: $light-primary-text;
+    //     }
+    //   }
+    // }
+    .cust-tab {
+      justify-content: space-between;
+      flex-direction: column;
+      height: 75vh;
+      display: flex;
+    }
+    // .mx-vh {
+    //   height: 100vh;
+    // }
+    mat-tab-group {
+      .mat-tab-label {
+        height: auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        .mat-tab-label-content {
+          white-space: normal;
+        }
+      }
+      .tab-content {
+        padding: 1em;
+      }
+    }
+    .mat-tab-group-dynamic-height {
+      .mat-tab-body-content {
+        overflow-y: auto;
+      }
+    }
+  }
+}

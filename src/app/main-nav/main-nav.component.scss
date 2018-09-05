@@ -1,0 +1,23 @@
+.sidenav-container {
+  height: 100%;
+}
+
+.sidenav {
+  width: 200px;
+}
+
+.mat-toolbar.mat-primary {
+  position: sticky;
+  top: 0;
+}
+
+.mat-sidenav-content {
+  ins-note {
+    .cust-tab {
+      height: 64vh;
+    }
+  }
+}
+mat-sidenav-content.mat-drawer-content {
+  overflow-x: hidden;
+}

@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+@import "~bootstrap/scss/bootstrap";
+
+// @import "./app/custom.style";
+@import "~@angular/material/theming";
+@include mat-core();
+
+@import "./app/components/inpfield/inpfield.component";
+@import "./app/note/note.component";
+
+@mixin custom-themes($theme) {
+  @include ins-note-theme($theme);
+  @include ins-field-theme($theme);
+}
+
+$my-app-primary: mat-palette($mat-pink);
+$my-app-accent: mat-palette($mat-pink, A200, A100, A400);
+
+$my-app-theme: mat-light-theme($my-app-primary, $my-app-accent);
+
+@include angular-material-theme($my-app-theme);
+@include custom-themes($my-app-theme);

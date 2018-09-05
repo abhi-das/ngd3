@@ -1,0 +1,11 @@
+@import "~@angular/material/theming";
+
+@mixin ins-field-theme($theme) {
+  ins-inpfield {
+    mat-form-field {
+      &.full-width {
+        width: 100%;
+      }
+    }
+  }
+}

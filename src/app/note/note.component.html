@@ -1,0 +1,45 @@
+<div class="ins-note-wrapper">
+  <p>Esse ullamco in duis Lorem voluptate dolor nulla. Qui proident pariatur aute nisi eu deserunt voluptate. Aliqua pariatur
+  </p>
+  <button mat-button class="customer-cta">
+    Customer
+    <span class="icon-container">
+      <mat-icon aria-label="forward arrow">forward_arrow</mat-icon>
+    </span>
+  </button>
+  <!-- <mat-toolbar>
+    <mat-toolbar-row>
+      <span>Customer</span>
+      <span class="btn-spacer"></span>
+      <mat-icon aria-label="forward arrow">forward_arrow</mat-icon>
+    </mat-toolbar-row>
+  </mat-toolbar> -->
+</div>
+<div class="cust-tab" [ngClass]="{'mx-vh' : isMxHeight }">
+
+  <mat-tab-group dynamicHeight="true" (selectedTabChange)="smfn($event)" [@.disabled]="true">
+    <mat-tab label="Nisi magna non nisi">
+      <div class="tab-content">
+        <ins-form [formFields]="formOpts"></ins-form>
+      </div>
+    </mat-tab>
+    <mat-tab label="Reprehenderit aute reprehenderit">
+      <div class="tab-content">
+        <ins-form [formFields]="formInvestment"></ins-form>
+      </div>
+    </mat-tab>
+    <mat-tab label="Anim qui eiusmod ea">
+      <div class="tab-content">
+        Anim qui eiusmod ea commodo cillum occaecat dolore laborum consequat et ea incididunt magna. Quis est excepteur anim id non
+        mollit et voluptate occaecat pariatur aliquip in.
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+  <button mat-button class="customer-cta" (click)="submitForm()">
+    Customer
+    <span class="icon-container">
+      <mat-icon aria-label="forward arrow">forward_arrow</mat-icon>
+    </span>
+  </button>
+
+</div>
